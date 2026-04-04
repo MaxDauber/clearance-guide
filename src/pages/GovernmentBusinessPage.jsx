@@ -404,8 +404,8 @@ export default function GovernmentBusinessPage() {
             </InfoBlock>
 
             <InfoBlock
-              title="Set-Aside Certifications — Your Unfair Advantage"
-              tip="Contracting officers are incentivized to meet small business goals. A set-aside certification can literally mean the difference between competing against 200 companies and competing against 20."
+              title="Set-Aside Certifications — Getting Your Foot in the Door"
+              tip="Contracting officers are incentivized to meet small business goals. These certifications can mean the difference between competing against 200 companies and competing against 20 — but they're most valuable as a bridge to building sustainable past performance."
             >
               <p>The federal government <strong>reserves</strong> a percentage of contracts for small businesses in various categories. These "set-aside" contracts are only open to certified companies — everyone else is locked out. This is by design: it's how the government ensures small businesses get a fair share.</p>
               <p><strong>Key certifications:</strong></p>
@@ -416,7 +416,8 @@ export default function GovernmentBusinessPage() {
                 <li><strong>WOSB</strong> (Women-Owned Small Business) — for businesses at least 51% owned and controlled by women. Set-asides in industries where women are underrepresented.</li>
                 <li><strong>EDWOSB</strong> (Economically Disadvantaged Women-Owned) — additional set-asides beyond WOSB.</li>
               </ul>
-              <p>You can hold multiple certifications simultaneously. A service-disabled veteran woman in a HUBZone? That's three set-aside categories. Stack them.</p>
+              <p>You can hold multiple certifications simultaneously, and qualifying for several can be a powerful way to get your first few contracts when you're breaking in. But be clear-eyed: set-asides are a <strong>launchpad, not a business model</strong>. The best companies use them to build past performance and relationships early, then transition to competing on open procurements where the real scale lives. Contracting officers and primes respect companies that can win on merit — not just on category eligibility.</p>
+              <p>A word of caution: gaming set-aside programs (shell companies, pass-throughs, or misrepresenting ownership) is fraud. The government investigates and prosecutes it. Build a real business that happens to qualify — don't build a qualification wrapper around a business that doesn't.</p>
             </InfoBlock>
 
           </PhaseSection>

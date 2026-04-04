@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -9,15 +8,14 @@ export default function Footer() {
         <div>
           <div className="footer__brand">CLEARED.</div>
         </div>
-        <div className="footer__links">
-          <Link to="/government-business">Gov Business</Link>
-          <Link to="/fcl">Facility Clearance</Link>
-          <Link to="/clearance">Personal Clearance</Link>
-        </div>
         <div className="footer__meta">
           <p className="footer__disclaimer">
-            For official guidance, visit{' '}
-            <a href="https://www.dcsa.mil" target="_blank" rel="noopener noreferrer">dcsa.mil</a>
+            This guide is for informational purposes only and does not constitute legal, security, or compliance advice.
+            For official guidance on security clearances and facility clearances, consult{' '}
+            <a href="https://www.dcsa.mil" target="_blank" rel="noopener noreferrer">DCSA</a>,{' '}
+            <a href="https://www.nist.gov" target="_blank" rel="noopener noreferrer">NIST</a>, and{' '}
+            <a href="https://www.fedramp.gov" target="_blank" rel="noopener noreferrer">FedRAMP</a>.
+            Regulations and processes change — always verify current requirements with the relevant authorizing bodies.
           </p>
           <p className="footer__credit">Built by <a href="https://www.linkedin.com/in/maxdauber/" target="_blank" rel="noopener noreferrer" style={{color: '#888', textDecoration: 'underline'}}>Max Dauber</a></p>
         </div>

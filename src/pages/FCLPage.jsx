@@ -77,10 +77,10 @@ export default function FCLPage() {
           <div className="section-header__label">Facility Clearance</div>
           <h2 className="section-header__title">Getting Your Facility Cleared</h2>
           <p className="section-header__desc">
-            Your company needs a Facility Clearance before any employee can hold or access classified information.
-            The FCL is issued by DCSA (Defense Counterintelligence and Security Agency) and certifies that your
-            facility meets the security requirements of the National Industrial Security Program.
-            Here's exactly how to get one — from finding a sponsor to passing your first security review.
+            Your company needs a Facility Clearance before any employee can hold a security clearance under your organization
+            or access classified information. The FCL is issued by DCSA (Defense Counterintelligence and Security Agency) and certifies that your
+            facility meets the security requirements of the National Industrial Security Program. Without one, you can't sponsor personnel clearances,
+            bid on classified work, or participate in classified programs — even as a subcontractor.
           </p>
         </div>
       </Reveal>
@@ -89,7 +89,8 @@ export default function FCLPage() {
         <div className="why-block">
           <h2 className="why-block__title">Why You Need This</h2>
           <div className="why-block__content">
-            <p>If your company wants to perform classified work for the U.S. government, you need a Facility Clearance. There are no exceptions and no shortcuts. Without an FCL, you cannot bid on classified contracts, your employees cannot hold security clearances, and you cannot access classified information — even if you win the contract.</p>
+            <p>If your company wants to perform classified work for the U.S. government, you need a Facility Clearance. There are no exceptions and no shortcuts. Without an FCL, you cannot bid on classified contracts, you cannot access classified information — and critically, <strong>your employees cannot hold personal security clearances under your company</strong>. An individual's clearance must be sponsored by a cleared facility. No FCL means no cleared workforce, period.</p>
+            <p>This matters even if you're not planning to handle classified documents yourself. If you want to hire cleared engineers, place cleared consultants, or sub on a classified program — your company needs its own FCL to sponsor and manage those clearances. Without it, your people either can't get cleared or have to hold their clearances through another company.</p>
             <p>The FCL process is one of the biggest barriers to entry in the defense industrial base. It takes <strong>4-18 months</strong>, requires a government sponsor, and involves scrutiny of your corporate structure, foreign ownership, and physical security. Companies that don't understand the process waste months on avoidable mistakes — incomplete FOCI documentation, unqualified KMP, inadequate facilities.</p>
             <p>This guide walks you through every step, from finding a sponsor to passing your first DCSA security review. Whether you're a startup entering the defense market or an established company expanding into classified work, this is your roadmap.</p>
           </div>
