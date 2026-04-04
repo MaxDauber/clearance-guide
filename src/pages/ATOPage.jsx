@@ -4,19 +4,6 @@ import Hero from '../components/Hero';
 import Reveal from '../components/Reveal';
 import usePageTitle from '../hooks/usePageTitle';
 
-function FAQItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={`faq-item ${open ? 'faq-item--open' : ''}`} onClick={() => setOpen(o => !o)}>
-      <div className="faq-item__q">
-        <span>{q}</span>
-        <span className="faq-item__toggle">{open ? '−' : '+'}</span>
-      </div>
-      {open && <div className="faq-item__a" dangerouslySetInnerHTML={{ __html: a }} />}
-    </div>
-  );
-}
-
 const atoFaqs = [
   {
     q: 'How long does it take to get an ATO?',
@@ -613,13 +600,32 @@ export default function ATOPage() {
         </div>
       </Reveal>
 
-      <Reveal>
-        <div className="faq-list">
-          {atoFaqs.map((faq, i) => (
-            <FAQItem key={i} q={faq.q} a={faq.a} />
-          ))}
-        </div>
-      </Reveal>
+      {(() => {
+        const groups = [
+          { theme: 'Process & Cost', indices: [0, 1, 4] },
+          { theme: 'FedRAMP & Authorization Types', indices: [2, 3, 8] },
+          { theme: 'Technical & Implementation', indices: [5, 6, 7, 9] },
+        ];
+        return (
+          <div className="faq-section">
+            {groups.map(group => (
+              <div key={group.theme} className="faq-group">
+                <Reveal><div className="faq-group__title">{group.theme}</div></Reveal>
+                {group.indices.map(idx => {
+                  const faq = atoFaqs[idx];
+                  if (!faq) return null;
+                  return (
+                    <Reveal key={idx}><div className="faq-item">
+                      <div className="faq-item__q">{faq.q}</div>
+                      <div className="faq-item__a" dangerouslySetInnerHTML={{ __html: faq.a }} />
+                    </div></Reveal>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        );
+      })()}
 
       <Reveal>
         <div className="page-next-links">

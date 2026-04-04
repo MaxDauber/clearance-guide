@@ -1,23 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Reveal from '../components/Reveal';
 import JourneyStep from '../components/JourneyStep';
 import fclSteps from '../data/fclSteps';
 import usePageTitle from '../hooks/usePageTitle';
-
-function FAQItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={`faq-item ${open ? 'faq-item--open' : ''}`} onClick={() => setOpen(o => !o)}>
-      <div className="faq-item__q">
-        <span>{q}</span>
-        <span className="faq-item__toggle">{open ? '−' : '+'}</span>
-      </div>
-      {open && <div className="faq-item__a" dangerouslySetInnerHTML={{ __html: a }} />}
-    </div>
-  );
-}
 
 const fclFaqs = [
   {
@@ -183,13 +170,32 @@ export default function FCLPage() {
         </div>
       </Reveal>
 
-      <Reveal>
-        <div className="faq-list">
-          {fclFaqs.map((faq, i) => (
-            <FAQItem key={i} q={faq.q} a={faq.a} />
-          ))}
-        </div>
-      </Reveal>
+      {(() => {
+        const groups = [
+          { theme: 'Process & Timeline', indices: [0, 2, 8] },
+          { theme: 'Eligibility & Requirements', indices: [1, 3, 4, 5, 6] },
+          { theme: 'Operations & Maintenance', indices: [7, 9] },
+        ];
+        return (
+          <div className="faq-section">
+            {groups.map(group => (
+              <div key={group.theme} className="faq-group">
+                <Reveal><div className="faq-group__title">{group.theme}</div></Reveal>
+                {group.indices.map(idx => {
+                  const faq = fclFaqs[idx];
+                  if (!faq) return null;
+                  return (
+                    <Reveal key={idx}><div className="faq-item">
+                      <div className="faq-item__q">{faq.q}</div>
+                      <div className="faq-item__a" dangerouslySetInnerHTML={{ __html: faq.a }} />
+                    </div></Reveal>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        );
+      })()}
 
       <Reveal>
         <div className="page-next-links">
