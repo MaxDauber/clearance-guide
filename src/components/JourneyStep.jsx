@@ -14,7 +14,7 @@ export default function JourneyStep({ number, step, align = 'left' }) {
           <div className="journey-step__tag">Step {String(number).padStart(2, '0')}</div>
           <h3 className="journey-step__title">{step.title}</h3>
           <div className="journey-step__text">
-            <p>{step.content}</p>
+            <p dangerouslySetInnerHTML={{ __html: step.content }} />
             {step.bullets && (
               <ul>
                 {step.bullets.map((b, i) => (
@@ -22,7 +22,7 @@ export default function JourneyStep({ number, step, align = 'left' }) {
                 ))}
               </ul>
             )}
-            {step.afterBullets && <p style={{ marginTop: '0.75rem' }}>{step.afterBullets}</p>}
+            {step.afterBullets && <p style={{ marginTop: '0.75rem' }} dangerouslySetInnerHTML={{ __html: step.afterBullets }} />}
           </div>
           {step.callout && (
             <div className="journey-step__callout" dangerouslySetInnerHTML={{ __html: step.callout.text }} />

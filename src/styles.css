@@ -498,6 +498,42 @@ strong { color: var(--text); font-weight: 600; }
   .faq-item { grid-template-columns: 1fr; gap: 1rem; }
 }
 
+/* ── FAQ Accordion (FCL/ATO pages) ─────────────────── */
+.faq-list {
+  max-width: 900px; margin: 0 auto; padding: 0 2rem;
+}
+.faq-list .faq-item {
+  display: block; cursor: pointer;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.2s;
+}
+.faq-list .faq-item:hover {
+  background: rgba(255,255,255,0.02);
+}
+.faq-list .faq-item__q {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--text); letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+.faq-list .faq-item__toggle {
+  font-size: 1.5rem; color: #444; flex-shrink: 0; margin-left: 1rem;
+  font-weight: 300; line-height: 1;
+}
+.faq-list .faq-item--open .faq-item__toggle { color: #fff; }
+.faq-list .faq-item__a {
+  margin-top: 1rem;
+  font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;
+  padding-right: 2rem;
+}
+.faq-list .faq-item__a strong { color: var(--text); }
+.faq-list .faq-item__a ul { padding-left: 1.25rem; margin: 0.75rem 0; }
+.faq-list .faq-item__a li { margin-bottom: 0.4rem; font-size: 0.875rem; }
+.faq-list .faq-item__a a { color: #888; text-decoration: underline; }
+.faq-list .faq-item__a a:hover { color: #fff; }
+
 /* ── Page Back Link ────────────────────────────────── */
 .page-back {
   text-align: center; padding: 2rem;

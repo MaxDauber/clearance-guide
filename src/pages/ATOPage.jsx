@@ -4,6 +4,63 @@ import Hero from '../components/Hero';
 import Reveal from '../components/Reveal';
 import usePageTitle from '../hooks/usePageTitle';
 
+function FAQItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={`faq-item ${open ? 'faq-item--open' : ''}`} onClick={() => setOpen(o => !o)}>
+      <div className="faq-item__q">
+        <span>{q}</span>
+        <span className="faq-item__toggle">{open ? '−' : '+'}</span>
+      </div>
+      {open && <div className="faq-item__a" dangerouslySetInnerHTML={{ __html: a }} />}
+    </div>
+  );
+}
+
+const atoFaqs = [
+  {
+    q: 'How long does it take to get an ATO?',
+    a: 'Typical timelines: <strong>6-12 months</strong> for a Moderate system with good preparation. <strong>12-18 months</strong> for FedRAMP. <strong>3-6 months</strong> if you\'re inheriting heavily from a FedRAMP-authorized environment and have experienced security staff. The biggest time sinks are SSP writing, waiting for the SCA assessment, and remediation cycles. Plan for at least one round of remediation after initial assessment.',
+  },
+  {
+    q: 'How much does ATO cost?',
+    a: '<strong>Internal ATO (agency-specific):</strong> $200K-$500K+ including security engineering, documentation, tools, and assessment support.<br/><strong>FedRAMP (3PAO assessed):</strong> $500K-$2M+ for initial authorization. 3PAO assessment fees alone run $150K-$400K. Annual continuous monitoring adds $200K-$500K/yr.<br/><br/>The biggest cost drivers: security engineering time (implementing controls), SSP writing (often outsourced to consultants at $200-$400/hr), and assessment remediation.',
+  },
+  {
+    q: 'What\'s the difference between ATO and FedRAMP?',
+    a: 'A standard <strong>ATO</strong> is issued by a single agency\'s Authorizing Official for a specific system deployment. It\'s valid only for that agency.<br/><br/><strong>FedRAMP</strong> is a government-wide program that standardizes cloud security assessment. A FedRAMP ATO is <strong>reusable across agencies</strong> — do the work once, and other agencies can leverage your authorization (with additional agency-specific requirements). FedRAMP is specifically for cloud service providers (IaaS, PaaS, SaaS).',
+  },
+  {
+    q: 'Do I need a separate ATO for each agency?',
+    a: 'Without FedRAMP: <strong>yes</strong>, technically each agency needs to authorize your system for their use. In practice, agencies may accept reciprocity or leverage another agency\'s assessment, but it\'s not guaranteed.<br/><br/>With FedRAMP: <strong>no</strong>. Your FedRAMP authorization is reusable. Agencies still issue their own ATO, but they leverage your FedRAMP package rather than conducting a full independent assessment. This is the "do once, use many" value proposition.',
+  },
+  {
+    q: 'What happens if I fail the security assessment?',
+    a: 'You don\'t "fail" — you get <strong>findings</strong>. Every finding goes into your POA&M with a remediation plan and timeline. The AO then decides whether the residual risk is acceptable. Common outcomes:<br/><ul><li>ATO with Conditions — authorized, but you must fix specific issues by specific dates</li><li>IATO — temporary authorization while you remediate</li><li>DATO — denied, but you can fix issues and resubmit</li></ul>The key is demonstrating a credible remediation plan. AOs rarely issue DATOs unless there are fundamental architectural security problems.',
+  },
+  {
+    q: 'What\'s the difference between NIST 800-53 and NIST 800-171?',
+    a: '<strong>NIST SP 800-53</strong> is the comprehensive catalog of security controls for federal information systems. It\'s what ATOs are assessed against. ~1,000+ controls across 20 families.<br/><br/><strong>NIST SP 800-171</strong> is a subset (~110 controls) specifically for protecting Controlled Unclassified Information (CUI) in non-federal systems — i.e., contractor systems. If you\'re a contractor handling CUI but not seeking a full ATO for your internal systems, 800-171 (and CMMC) is your framework. If your system will operate ON government infrastructure, you need a full 800-53-based ATO.',
+  },
+  {
+    q: 'What is cATO and should I care?',
+    a: '<strong>Continuous ATO (cATO)</strong> replaces the traditional "assess every 3 years" model with real-time, ongoing monitoring and authorization. Instead of a point-in-time snapshot, you maintain a continuous security posture dashboard.<br/><br/>You should care if you\'re building a DevSecOps pipeline for DoD. Platform One (Air Force) and Black Pearl (Navy) both support cATO pathways. The investment in automation and monitoring tools pays off through faster deployment cycles — new features can go live without re-authorization if your pipeline is approved.',
+  },
+  {
+    q: 'Can I use AWS/Azure/GCP GovCloud to simplify ATO?',
+    a: 'Absolutely — this is the <strong>smartest architectural decision</strong> you can make. AWS GovCloud, Azure Government, and Google Cloud for Government are all FedRAMP-authorized. By hosting on these platforms, you <strong>inherit 30-40% of controls</strong> automatically (physical security, infrastructure, hypervisor security, etc.).<br/><br/>Request the provider\'s <strong>Customer Responsibility Matrix (CRM)</strong> — it tells you exactly which controls they handle vs. what you own. Build your SSP from there.',
+  },
+  {
+    q: 'What\'s an IATO and when would I get one?',
+    a: 'An <strong>Interim ATO (IATO)</strong> is a temporary authorization, typically 90-180 days. You\'d get one when:<br/><ul><li>Your assessment revealed findings that need remediation, but the AO accepts the short-term risk</li><li>You need to operate before your full assessment is complete (mission need)</li><li>You\'re migrating between environments and need temporary authorization during transition</li></ul>IATOs are not renewable indefinitely — they\'re meant as a bridge to a full ATO. Expect pressure to complete remediation within the IATO period.',
+  },
+  {
+    q: 'What tools do I need for ATO compliance?',
+    a: 'Essential tooling:<br/><ul><li><strong>Vulnerability scanner</strong> — Nessus, Qualys, or Rapid7 for continuous scanning</li><li><strong>STIG compliance</strong> — OpenSCAP, SCAP Compliance Checker (SCC), or commercial tools like Anchore</li><li><strong>SIEM</strong> — Splunk, ELK Stack, or cloud-native (CloudWatch/Sentinel) for audit logging and monitoring</li><li><strong>GRC platform</strong> — eMASS (DoD-mandated), or commercial tools like Telos Xacta, CSAM, or RegScale for managing your SSP and POA&Ms</li><li><strong>Endpoint protection</strong> — CrowdStrike, Carbon Black, or Microsoft Defender for EDR</li><li><strong>Secrets management</strong> — HashiCorp Vault, AWS Secrets Manager for credential management</li></ul>Budget $50K-$200K/yr for tooling depending on scale.',
+  },
+];
+
+
 const phases = [
   { id: 'overview', label: 'Phase 1: Overview', number: '01' },
   { id: 'categorize', label: 'Phase 2: Categorize', number: '02' },
@@ -535,6 +592,21 @@ export default function ATOPage() {
           </InfoBlock>
         </PhaseSection>
       </main>
+
+      <Reveal>
+        <div className="section-header" style={{ marginTop: '4rem' }}>
+          <div className="section-header__label">FAQ</div>
+          <h2 className="section-header__title">Frequently Asked Questions</h2>
+        </div>
+      </Reveal>
+
+      <Reveal>
+        <div className="faq-list">
+          {atoFaqs.map((faq, i) => (
+            <FAQItem key={i} q={faq.q} a={faq.a} />
+          ))}
+        </div>
+      </Reveal>
 
       <Reveal>
         <div className="page-next-links">
