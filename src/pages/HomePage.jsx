@@ -26,6 +26,13 @@ const pathways = [
     to: '/clearance',
     label: 'Understand personal clearances',
   },
+  {
+    number: '04',
+    title: 'Authority to Operate (ATO)',
+    desc: 'Before any IT system touches government networks, it needs an ATO. NIST RMF, FIPS 199 categorization, 800-53 controls, FedRAMP, DoD Impact Levels, cATO, and how to turn compliance into competitive advantage.',
+    to: '/ato',
+    label: 'Navigate the ATO process',
+  },
 ];
 
 const journeySteps = [

@@ -5,6 +5,7 @@ const links = [
   { label: 'Gov Business', to: '/government-business' },
   { label: 'FCL', to: '/fcl' },
   { label: 'Clearance', to: '/clearance' },
+  { label: 'ATO', to: '/ato' },
 ];
 
 export default function Nav() {
