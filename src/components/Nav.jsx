@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const links = [
-  { label: 'Gov Business', to: '/government-business' },
+  { label: 'Gov Business 101', to: '/government-business' },
   { label: 'FCL', to: '/fcl' },
   { label: 'Clearance', to: '/clearance' },
   { label: 'ATO', to: '/ato' },

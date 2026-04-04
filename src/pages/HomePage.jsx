@@ -85,14 +85,6 @@ export default function HomePage() {
         </Reveal>
       ))}
 
-      <Reveal>
-        <div className="pull-quote pull-quote--section" style={{ padding: '8rem 2rem' }}>
-          <p className="pull-quote__text" style={{ fontSize: 'clamp(1.2rem, 2.5vw, 2rem)', color: '#666' }}>
-            This is the resource you bookmark and send to every founder who asks<br />
-            <strong style={{ color: '#e8e8e8' }}>"How do I sell to DoD?"</strong>
-          </p>
-        </div>
-      </Reveal>
     </>
   );
 }

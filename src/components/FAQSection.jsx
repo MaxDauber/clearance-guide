@@ -21,8 +21,8 @@ function stripHtml(html) {
   return html
     .replace(/<\/p><p>/g, '\n\n')
     .replace(/<\/?(p|ul|li|strong|em|br\s*\/?)>/g, (match) => {
-      if (match === '<strong>') return '**';
-      if (match === '</strong>') return '**';
+      if (match === '<strong>') return '';
+      if (match === '</strong>') return '';
       if (match === '<em>') return '_';
       if (match === '</em>') return '_';
       if (match === '<li>') return '• ';

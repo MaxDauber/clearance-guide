@@ -272,12 +272,12 @@ strong { color: var(--text); font-weight: 600; }
 .journey-step__number {
   font-family: var(--font-display);
   font-size: clamp(12rem, 20vw, 25rem);
-  font-weight: 700; color: #080808;
+  font-weight: 700; color: #1a1a1a;
   line-height: 1; user-select: none;
   transition: color 0.6s var(--ease-smooth);
 }
 .journey-step:hover .journey-step__number {
-  color: #0c0c0c;
+  color: #2a2a2a;
 }
 
 .journey-step__content {
@@ -534,6 +534,27 @@ strong { color: var(--text); font-weight: 600; }
 .faq-list .faq-item__a a { color: #888; text-decoration: underline; }
 .faq-list .faq-item__a a:hover { color: #fff; }
 
+/* ── Why You Need This Block ──────────────────────── */
+.why-block {
+  max-width: 800px; margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.why-block__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700; color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+}
+.why-block__content p {
+  font-size: 1rem; color: var(--text-dim);
+  line-height: 1.85; margin-bottom: 1.25rem;
+}
+.why-block__content p:last-child { margin-bottom: 0; }
+.why-block__content strong { color: var(--text); }
+
 /* ── Page Back Link ────────────────────────────────── */
 .page-back {
   text-align: center; padding: 2rem;
@@ -735,7 +756,7 @@ strong { color: var(--text); font-weight: 600; }
 .phase-section__ghost {
   font-family: var(--font-display);
   font-size: clamp(10rem, 18vw, 20rem);
-  font-weight: 700; color: #080808;
+  font-weight: 700; color: #1a1a1a;
   line-height: 0.85; user-select: none;
   position: absolute; top: -4rem; right: -2rem;
   pointer-events: none;

@@ -119,7 +119,7 @@ function StickyNav({ activePhase }) {
           href={`#${p.id}`}
           className={`phase-nav__item ${activePhase === p.id ? 'phase-nav__item--active' : ''}`}
         >
-          <span className="phase-nav__number">{p.number}</span>
+          <span className="phase-nav__num">{p.number}</span>
           <span className="phase-nav__label">{p.label.replace(/Phase \d+: /, '')}</span>
         </a>
       ))}
@@ -168,11 +168,23 @@ export default function ATOPage() {
       </Reveal>
 
       <Reveal>
+        <div className="why-block">
+          <h2 className="why-block__title">Why You Need This</h2>
+          <div className="why-block__content">
+            <p>Every IT system that processes, stores, or transmits federal data must have an Authority to Operate before it goes live. No ATO, no deployment — it doesn't matter how good your product is, how urgent the mission need is, or how many generals want it. Without authorization, your system does not touch government networks.</p>
+            <p>ATO is the single biggest technical gate between your product and a government customer. It typically takes <strong>6-18 months</strong> and costs <strong>$200K-$2M+</strong> depending on scope. But it's also one of the most powerful competitive moats in defense tech — once you have it, competitors can't just copy your product; they need to replicate your entire security posture.</p>
+            <p>Most companies underestimate ATO because they don't understand it. They build first, then discover they need 325+ security controls, a 500-page System Security Plan, and an independent assessment. This guide gives you the full picture — so you can architect for compliance from day one and turn a regulatory burden into a strategic asset.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal>
         <div className="pull-quote">
           "No ATO, no deployment. Period. It doesn't matter how good your product is — without authorization, it doesn't touch government networks."
         </div>
       </Reveal>
 
+      <div className="gov-layout">
       <StickyNav activePhase={activePhase} />
 
       <main>
@@ -592,6 +604,7 @@ export default function ATOPage() {
           </InfoBlock>
         </PhaseSection>
       </main>
+      </div>
 
       <Reveal>
         <div className="section-header" style={{ marginTop: '4rem' }}>

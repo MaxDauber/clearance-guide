@@ -86,6 +86,17 @@ export default function FCLPage() {
       </Reveal>
 
       <Reveal>
+        <div className="why-block">
+          <h2 className="why-block__title">Why You Need This</h2>
+          <div className="why-block__content">
+            <p>If your company wants to perform classified work for the U.S. government, you need a Facility Clearance. There are no exceptions and no shortcuts. Without an FCL, you cannot bid on classified contracts, your employees cannot hold security clearances, and you cannot access classified information — even if you win the contract.</p>
+            <p>The FCL process is one of the biggest barriers to entry in the defense industrial base. It takes <strong>4-18 months</strong>, requires a government sponsor, and involves scrutiny of your corporate structure, foreign ownership, and physical security. Companies that don't understand the process waste months on avoidable mistakes — incomplete FOCI documentation, unqualified KMP, inadequate facilities.</p>
+            <p>This guide walks you through every step, from finding a sponsor to passing your first DCSA security review. Whether you're a startup entering the defense market or an established company expanding into classified work, this is your roadmap.</p>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal>
         <div className="pull-quote">
           <p className="pull-quote__text">
             <strong>Confidential</strong> — lowest level.{' '}

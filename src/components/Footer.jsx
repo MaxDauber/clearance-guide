@@ -19,7 +19,7 @@ export default function Footer() {
             For official guidance, visit{' '}
             <a href="https://www.dcsa.mil" target="_blank" rel="noopener noreferrer">dcsa.mil</a>
           </p>
-          <p className="footer__credit">Built by MULTIVAC</p>
+          <p className="footer__credit">Built by <a href="https://www.linkedin.com/in/maxdauber/" target="_blank" rel="noopener noreferrer" style={{color: '#888', textDecoration: 'underline'}}>Max Dauber</a></p>
         </div>
       </div>
     </footer>
