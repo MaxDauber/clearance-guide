@@ -65,7 +65,7 @@ const personalSteps = [
     ],
     callout: {
       type: 'info',
-      text: '💡 <strong>What TW 3.0 changes:</strong> More automation, faster processing, better reciprocity between agencies, and a shift from "snapshot" investigations to continuous monitoring. Good news for applicants — fewer surprises.',
+      text: '💡 <strong>What Trusted Workforce 2.0 means for you:</strong> More automation, faster processing, better reciprocity between agencies, and a shift from "snapshot" investigations to continuous monitoring. Good news for applicants — fewer surprises.',
     },
   },
   {
