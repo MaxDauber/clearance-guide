@@ -62,7 +62,7 @@ export default function FCLPage() {
       <Reveal>
         <div className="section-header">
           <div className="section-header__label">Facility Clearance</div>
-          <h2 className="section-header__title">Getting Your Facility Cleared</h2>
+          <h2 className="section-header__title">Getting Your Company Cleared</h2>
           <p className="section-header__desc">
             Your company needs a Facility Clearance before any employee can hold a security clearance under your organization
             or access classified information. The FCL is issued by DCSA (Defense Counterintelligence and Security Agency) and certifies that your

@@ -388,6 +388,76 @@ export default function GovernmentBusinessPage() {
             </InfoBlock>
 
             <InfoBlock
+              title="The PPBE Process — How DoD Money Actually Gets Made"
+              tip="If you want to influence what gets funded, you need to engage during Phase 1 (Planning) and Phase 2 (Programming) — that's 2-4 years before the money is available. By the time an RFP drops, the budget was locked years ago. The companies that shape requirements during PPBE are the ones that win contracts during execution."
+              gotcha="The PPBE cycle for FY27 money started in FY24. If you're trying to get funding for a new capability, you're not competing for this year's budget — you're competing for money 2-3 years from now. Plan accordingly."
+            >
+              <p>The <strong>PPBE process</strong> (Planning, Programming, Budgeting, and Execution) is the Department of Defense's system for deciding how to spend roughly $900 billion per year. If you don't understand PPBE, you don't understand where the money comes from — and you'll always be reacting instead of shaping. In 2022, the Deputy Secretary of Defense added a fifth phase — <strong>PPBE</strong> is sometimes called <strong>PPBEA</strong> (with "Assessment" added) — but the core four phases remain the foundation.</p>
+
+              <p><strong>Phase 1: Planning (2-3 years out)</strong></p>
+              <p>This is where DoD decides <strong>what problems need solving</strong>. The Chairman of the Joint Chiefs, through the Joint Staff, produces strategic guidance documents that define national security priorities:</p>
+              <ul>
+                <li><strong>National Defense Strategy (NDS)</strong> — the top-level document. Sets the strategic direction: what threats we face, what capabilities we need.</li>
+                <li><strong>National Military Strategy (NMS)</strong> — how the military will execute the NDS.</li>
+                <li><strong>Defense Planning Guidance (DPG)</strong> — the Secretary of Defense's fiscal guidance to the services. This is the document that tells the Army, Navy, Air Force, and Space Force: "here are your spending priorities and constraints."</li>
+                <li><strong>Joint Programming Guidance (JPG)</strong> — specific programming direction from OSD to the components.</li>
+                <li><strong>Capability gap assessments</strong> — the Joint Requirements Oversight Council (JROC) and combatant commands identify what the force can't do but needs to. These gaps drive requirements.</li>
+              </ul>
+              <p><strong>Why this matters to you:</strong> The planning phase is where priorities are set. If your technology addresses a capability gap identified in the NDS or by a combatant command, you have a tailwind. If it doesn't, you're swimming upstream. Read the NDS, the service-specific strategies, and combatant command posture statements. They tell you where the money is going.</p>
+
+              <p><strong>Phase 2: Programming (2 years out)</strong></p>
+              <p>This is where DoD decides <strong>how much money goes where</strong>. Each military service and defense agency builds a <strong>Program Objective Memorandum (POM)</strong> — a detailed plan of what they want to spend over the next 5 years (the Future Years Defense Program, or <strong>FYDP</strong>).</p>
+              <ul>
+                <li><strong>POM development</strong> — each service prioritizes programs and allocates dollars within their topline. This is an intensely competitive internal process — programs fight other programs for funding.</li>
+                <li><strong>Program Decision Memorandums (PDMs)</strong> — OSD reviews the POMs and issues PDMs directing changes. "Move $200M from Program X to Program Y." This is where the real power lives.</li>
+                <li><strong>FYDP</strong> — the 5-year spending plan. Each line item (called a <strong>Program Element or PE</strong>) has a specific budget code. You can look up PE numbers to track funding for specific programs.</li>
+                <li><strong>Major Force Programs (MFPs)</strong> — the FYDP is organized into 11 major categories: strategic forces, general purpose forces, C3I, mobility forces, guard/reserve, R&D, central supply/maintenance, training/medical, admin, support to other nations, and special operations.</li>
+                <li><strong>Reclamas</strong> — when OSD cuts a program in the PDM, the service can appeal. This back-and-forth negotiation shapes the final budget request.</li>
+              </ul>
+              <p><strong>Why this matters to you:</strong> The POM is where your program gets funded — or killed. If you're working with a program office, ask them about their POM submission. Are they funded in the FYDP? For how many years? At what level? If a program isn't in the POM, it doesn't have money, no matter what the program manager tells you.</p>
+
+              <p><strong>Phase 3: Budgeting (1-2 years out)</strong></p>
+              <p>This is where the programming decisions get translated into <strong>the actual budget request</strong> that goes to Congress. The Comptroller (DOD's CFO) converts the POM into budget documents with line-item detail.</p>
+              <ul>
+                <li><strong>Budget Estimate Submissions (BES)</strong> — each component submits detailed budget justification documents.</li>
+                <li><strong>OSD/OMB review</strong> — the Office of Management and Budget (White House) reviews the DoD budget alongside all other federal agencies. OMB can and does make changes.</li>
+                <li><strong>President's Budget Request (PBR)</strong> — submitted to Congress in February. This is the public document you can read. The budget justification books (called <strong>J-Books</strong> or <strong>R-1/P-1/O-1 documents</strong>) break down every program element. These are goldmines of intelligence — they tell you exactly what the government wants to buy and how much they're planning to spend.</li>
+                <li><strong>Appropriations categories</strong> — money comes in specific "colors" that can only be used for specific purposes:
+                  <ul>
+                    <li><strong>RDT&E (Research, Development, Test & Evaluation)</strong> — R&D money. Budget Activities 1-7 range from basic research to operational system development.</li>
+                    <li><strong>Procurement</strong> — buying stuff at scale. Production contracts.</li>
+                    <li><strong>O&M (Operations & Maintenance)</strong> — day-to-day operations, services contracts, sustainment. Most services contracts are O&M funded.</li>
+                    <li><strong>MILPERS (Military Personnel)</strong> — military salaries and benefits.</li>
+                    <li><strong>MILCON (Military Construction)</strong> — building facilities.</li>
+                  </ul>
+                </li>
+                <li><strong>Congressional action</strong> — Congress holds hearings, marks up the budget in the Armed Services Committees (authorization) and Appropriations Committees (actual funding), debates, amends, and eventually passes (sometimes) appropriations bills. The <strong>NDAA</strong> (National Defense Authorization Act) authorizes programs; the <strong>Defense Appropriations Act</strong> actually funds them. You need both.</li>
+              </ul>
+              <p><strong>Why this matters to you:</strong> Read the President's Budget justification books for your market. They're public, they're detailed, and they tell you exactly what agencies are planning to buy. The R-1 (RDT&E), P-1 (Procurement), and O-1 (O&M) exhibits list every program element with dollar amounts. Also watch the congressional markup — Congress adds, cuts, and moves money. The final appropriation often looks different from the President's request.</p>
+
+              <p><strong>Phase 4: Execution (current year)</strong></p>
+              <p>This is where the money is actually <strong>obligated and spent</strong>. Funds are apportioned by OMB, allocated to commands, and distributed to contracting activities that award contracts to companies like yours.</p>
+              <ul>
+                <li><strong>Apportionment</strong> — OMB releases funds to DoD, usually quarterly. Even appropriated money isn't available until OMB apportions it.</li>
+                <li><strong>Obligation</strong> — the government enters a binding agreement to spend the money (i.e., awards a contract). This is the legal commitment. Agencies track obligation rates obsessively — unobligated funds signal a program that can't execute, which makes it a target for cuts.</li>
+                <li><strong>Expenditure</strong> — actual payment to contractors. This lags obligation by months or years on large programs.</li>
+                <li><strong>Color of money rules</strong> — RDT&E funds are available for 2 years, procurement for 3 years, O&M for 1 year. After that, they expire. This creates the end-of-fiscal-year spending frenzy in September — agencies rush to obligate expiring funds.</li>
+                <li><strong>Reprogramming</strong> — moving money between programs during execution. Below certain thresholds, DoD can do this internally. Above those thresholds (varies by appropriation), they need congressional approval. Reprogramming requests (called <strong>DD Form 1415s</strong>) are closely watched by congressional staff.</li>
+                <li><strong>Continuing Resolutions (CRs)</strong> — when Congress doesn't pass appropriations on time (which is most years), the government operates on a CR at prior-year funding levels. CRs prohibit new program starts and production rate increases. This creates chaos for new programs and is why September-December is often a dead zone for new awards.</li>
+              </ul>
+              <p><strong>Why this matters to you:</strong> Execution phase is when contracts get awarded and money flows. Track obligation rates for your programs — if a program is under-obligating, it's at risk of being cut in the next POM. Also understand the color of money on your contract: O&M money expires September 30, so if your contracting officer hasn't obligated it by then, it's gone. RDT&E gives you a bit more runway (2 years), and procurement even more (3 years).</p>
+
+              <p><strong>The full PPBE timeline visualized:</strong></p>
+              <ul>
+                <li><strong>FY24-25</strong> — Planning: DoD identifies that it needs capability X based on the NDS and combatant command requirements.</li>
+                <li><strong>FY25</strong> — Programming: The service includes funding for capability X in its POM submission for FY27-31.</li>
+                <li><strong>FY25-26</strong> — Budgeting: Capability X appears in the FY27 President's Budget Request, goes through congressional review.</li>
+                <li><strong>FY27</strong> — Execution: Congress appropriates funds, OMB apportions them, the contracting office awards the contract. You start work.</li>
+              </ul>
+              <p>That's a <strong>3+ year cycle</strong> from planning to contract award. The companies that win big in government contracting are the ones that engage at the front end of this cycle — shaping requirements, educating program offices, and ensuring their capabilities are reflected in the POM — not the ones that wait for the RFP.</p>
+            </InfoBlock>
+
+            <InfoBlock
               title="The 'Valley of Death'"
               gotcha="90% of successful pilots never become programs of record. The technology worked. The users loved it. The budget wasn't there. Plan for this from day one."
             >
