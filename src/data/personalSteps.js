@@ -56,7 +56,7 @@ const personalSteps = [
   },
   {
     title: 'Continuous Vetting & Trusted Workforce 2.0',
-    content: 'The old model of reinvestigating people every 5-10 years is being replaced by <strong>Trusted Workforce 2.0 (TW 2.0)</strong>, now evolving into <strong>3.0</strong>:',
+    content: 'The old model of reinvestigating people every 5-10 years is being replaced by <strong>Trusted Workforce 2.0 (TW 2.0)</strong>:',
     bullets: [
       '<strong>Continuous vetting</strong> — automated checks run ongoing (financial, criminal, travel records)',
       '<strong>No more periodic reinvestigations</strong> — replaced by continuous monitoring',

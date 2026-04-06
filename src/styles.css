@@ -951,6 +951,230 @@ strong { color: var(--text); font-weight: 600; }
 }
 .not-found__link:hover { color: #fff; }
 
+/* ── PPBE Visual Timeline ─────────────────────────── */
+.ppbe-visual {
+  margin: 2.5rem 0 2rem;
+  padding: 2rem 2rem 1.5rem;
+  background: #080808;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+.ppbe-visual__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+.ppbe-visual__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+}
+.ppbe-visual__sublabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #444;
+  letter-spacing: 0.08em;
+}
+
+/* Timeline track */
+.ppbe-visual__timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+.ppbe-visual__track {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, #2a4a2a, #2a4a5a, #4a3a2a, #3a2a4a);
+  opacity: 0.5;
+}
+
+/* Phase cards */
+.ppbe-visual__phase {
+  position: relative;
+  padding: 0 0.75rem;
+}
+.ppbe-visual__phase-marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+.ppbe-visual__phase--planning .ppbe-visual__phase-marker {
+  background: rgba(42, 74, 42, 0.25);
+  color: #5a9a5a;
+  border: 1px solid rgba(42, 74, 42, 0.4);
+}
+.ppbe-visual__phase--programming .ppbe-visual__phase-marker {
+  background: rgba(42, 58, 74, 0.25);
+  color: #5a8aaa;
+  border: 1px solid rgba(42, 58, 74, 0.4);
+}
+.ppbe-visual__phase--budgeting .ppbe-visual__phase-marker {
+  background: rgba(74, 58, 42, 0.25);
+  color: #aa8a5a;
+  border: 1px solid rgba(74, 58, 42, 0.4);
+}
+.ppbe-visual__phase--execution .ppbe-visual__phase-marker {
+  background: rgba(58, 42, 74, 0.25);
+  color: #8a6aaa;
+  border: 1px solid rgba(58, 42, 74, 0.4);
+}
+
+.ppbe-visual__phase-tag {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+.ppbe-visual__phase-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  margin-bottom: 0.15rem;
+}
+.ppbe-visual__phase-when {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.ppbe-visual__phase-desc {
+  font-size: 0.78rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.ppbe-visual__phase-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.ppbe-visual__phase-items span {
+  font-size: 0.7rem;
+  color: #555;
+  padding-left: 0.75rem;
+  position: relative;
+  line-height: 1.4;
+}
+.ppbe-visual__phase-items span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #333;
+}
+.ppbe-visual__phase--planning .ppbe-visual__phase-items span::before { background: #2a4a2a; }
+.ppbe-visual__phase--programming .ppbe-visual__phase-items span::before { background: #2a3a4a; }
+.ppbe-visual__phase--budgeting .ppbe-visual__phase-items span::before { background: #4a3a2a; }
+.ppbe-visual__phase--execution .ppbe-visual__phase-items span::before { background: #3a2a4a; }
+
+/* Color of Money section */
+.ppbe-visual__money-colors {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.ppbe-visual__money-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+.ppbe-visual__money-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.ppbe-visual__money-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: #555;
+}
+.ppbe-visual__money-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ppbe-visual__money-item--om .ppbe-visual__money-dot { background: #aa5a5a; }
+.ppbe-visual__money-item--rdte .ppbe-visual__money-dot { background: #5a8aaa; }
+.ppbe-visual__money-item--proc .ppbe-visual__money-dot { background: #5a9a5a; }
+.ppbe-visual__money-item--milcon .ppbe-visual__money-dot { background: #aa8a5a; }
+.ppbe-visual__money-item--milpers .ppbe-visual__money-dot { background: #8a6aaa; }
+.ppbe-visual__money-item strong { color: #888; }
+
+/* CTA */
+.ppbe-visual__cta {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: rgba(42, 74, 42, 0.06);
+  border-left: 2px solid #2a4a2a;
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* Detail sections */
+.ppbe-details {
+  margin-top: 1.5rem;
+}
+.ppbe-details__phase {
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+.ppbe-details__phase h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  margin: 0 0 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ppbe-visual { padding: 1.5rem 1.25rem 1.25rem; }
+  .ppbe-visual__timeline {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .ppbe-visual__track { display: none; }
+  .ppbe-visual__phase {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 1rem;
+    align-items: start;
+  }
+  .ppbe-visual__phase-marker { margin-bottom: 0; }
+  .ppbe-visual__money-items { flex-direction: column; gap: 0.4rem; }
+  .ppbe-visual__header { flex-direction: column; gap: 0.25rem; }
+}
+
 /* ── Progress Bar ──────────────────────────────────── */
 .progress-bar {
   position: fixed;
