@@ -49,16 +49,18 @@ strong { color: var(--text); font-weight: 600; }
 /* ── Reveal ────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transform: translateY(16px);
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+  will-change: opacity, transform;
 }
 .reveal--visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  will-change: auto;
 }
-.reveal--delay-1 { transition-delay: 0.1s; }
-.reveal--delay-2 { transition-delay: 0.2s; }
-.reveal--delay-3 { transition-delay: 0.3s; }
+.reveal--delay-1 { transition-delay: 0.05s; }
+.reveal--delay-2 { transition-delay: 0.1s; }
+.reveal--delay-3 { transition-delay: 0.15s; }
 
 /* ── Nav ───────────────────────────────────────────── */
 .nav {
@@ -70,8 +72,8 @@ strong { color: var(--text); font-weight: 600; }
 }
 .nav--scrolled {
   background: rgba(5, 5, 5, 0.85);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 .nav__logo {
@@ -133,8 +135,8 @@ strong { color: var(--text); font-weight: 600; }
   display: none;
   position: fixed; inset: 0; z-index: 105;
   background: rgba(5, 5, 5, 0.97);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -745,6 +747,8 @@ strong { color: var(--text); font-weight: 600; }
 /* ── Phase Section ────────────────────────────────── */
 .phase-section {
   padding: 8rem 0 4rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 2000px;
 }
 .phase-section + .phase-section {
   border-top: 1px solid rgba(255,255,255,0.03);
@@ -784,10 +788,19 @@ strong { color: var(--text); font-weight: 600; }
 
 /* ── Info Block ────────────────────────────────────── */
 .info-block {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 .info-block + .info-block {
   border-top: 1px solid rgba(255,255,255,0.03);
+}
+.gov-layout .info-block {
+  padding: 3rem 0;
+  max-width: none;
+  margin: 0;
 }
 .info-block__title {
   font-family: var(--font-display);

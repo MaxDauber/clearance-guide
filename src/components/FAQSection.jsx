@@ -39,7 +39,7 @@ export default function FAQSection() {
     <section id="faq">
       <Reveal>
         <div className="section-header">
-          <div className="section-header__label">05 — FAQ</div>
+          <div className="section-header__label">05 / FAQ</div>
           <h2 className="section-header__title">Frequently Asked Questions</h2>
           <p className="section-header__desc">
             Quick answers to the things everyone asks. All visible, no clicking required.

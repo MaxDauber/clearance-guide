@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 const statements = [
   {
     title: 'Inactive, Not Gone',
-    body: 'When you leave a cleared job, your clearance goes into "inactive" status. It doesn\'t disappear — it\'s still on file in DISS (Defense Information System for Security). Any cleared employer can look you up.',
+    body: 'When you leave a cleared job, your clearance goes into "inactive" status. It doesn\'t disappear; it\'s still on file in DISS (Defense Information System for Security). Any cleared employer can look you up.',
   },
   {
     title: 'The 2-Year Window',
@@ -16,7 +16,7 @@ const statements = [
   },
   {
     title: 'Between Jobs? Do This.',
-    body: 'Keep your contact info current with your last FSO. Report any life changes (moves, marriages, foreign travel). Stay clean — continuous vetting doesn\'t pause just because your clearance is inactive.',
+    body: 'Keep your contact info current with your last FSO. Report any life changes (moves, marriages, foreign travel). Stay clean: continuous vetting doesn\'t pause just because your clearance is inactive.',
   },
 ];
 
@@ -25,7 +25,7 @@ export default function TransferabilitySection() {
     <section>
       <Reveal>
         <div className="section-header">
-          <div className="section-header__label">03 — Transferability</div>
+          <div className="section-header__label">03 / Transferability</div>
           <h2 className="section-header__title">Transferability & Portability</h2>
           <p className="section-header__desc">
             Your clearance belongs to <em>you</em>, not your employer. Here's how it works when you move on.

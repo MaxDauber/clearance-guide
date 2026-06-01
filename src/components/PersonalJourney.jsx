@@ -16,10 +16,10 @@ export default function PersonalJourney() {
     <section id="personal">
       <Reveal>
         <div className="section-header">
-          <div className="section-header__label">02 — Personal Clearance</div>
+          <div className="section-header__label">02 / Personal Clearance</div>
           <h2 className="section-header__title">Personal Security Clearance</h2>
           <p className="section-header__desc">
-            An individual clearance lets you personally access classified information. You can't apply on your own — an employer or agency must sponsor you.
+            An individual clearance lets you personally access classified information. You can't apply on your own; an employer or agency must sponsor you.
           </p>
         </div>
       </Reveal>

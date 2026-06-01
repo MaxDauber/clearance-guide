@@ -15,7 +15,7 @@ const pathways = [
   {
     number: '02',
     title: 'Facility Clearance (FCL)',
-    desc: 'Your company needs a Facility Clearance before any employee can hold or access classified information. Here\'s exactly how to get one — sponsors, NISS, KMP, FOCI, and the full DCSA process.',
+    desc: 'Your company needs a Facility Clearance before any employee can hold or access classified information. Here\'s exactly how to get one: sponsors, NISS, KMP, FOCI, and the full DCSA process.',
     to: '/fcl',
     label: 'Get your facility cleared',
   },

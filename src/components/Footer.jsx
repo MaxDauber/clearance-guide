@@ -15,7 +15,7 @@ export default function Footer() {
             <a href="https://www.dcsa.mil" target="_blank" rel="noopener noreferrer">DCSA</a>,{' '}
             <a href="https://www.nist.gov" target="_blank" rel="noopener noreferrer">NIST</a>, and{' '}
             <a href="https://www.fedramp.gov" target="_blank" rel="noopener noreferrer">FedRAMP</a>.
-            Regulations and processes change — always verify current requirements with the relevant authorizing bodies.
+            Regulations and processes change. Always verify current requirements with the relevant authorizing bodies.
           </p>
           <p className="footer__credit">Built by <a href="https://www.linkedin.com/in/maxdauber/" target="_blank" rel="noopener noreferrer" style={{color: '#888', textDecoration: 'underline'}}>Max Dauber</a></p>
         </div>
